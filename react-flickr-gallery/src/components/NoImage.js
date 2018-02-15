@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const NoImage = (props) => (
   <li className='no-image'>
   

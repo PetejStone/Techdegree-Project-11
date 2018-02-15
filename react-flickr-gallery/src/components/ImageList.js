@@ -3,6 +3,7 @@ import Image from './Image';
 import NoImage from './NoImage';
 
 
+
 const ImageList = (props) => { 
   
   const results = props.data;
@@ -11,7 +12,7 @@ const ImageList = (props) => {
 
   if (results.length > 0) {
     photos = results.map(photo => 
-      <Image url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_m.jpg`} key={photo.id} />
+      <Image url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_n.jpg`} key={photo.id} />
      );
   } else {
     photos = <NoImage />

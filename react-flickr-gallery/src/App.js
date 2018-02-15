@@ -3,6 +3,7 @@ import SearchForm from './components/SearchForm';
 import axios from 'axios';
 import ImageList from './components/ImageList';
 import './App.css';
+import apiKey from './config.js';
 
 
 

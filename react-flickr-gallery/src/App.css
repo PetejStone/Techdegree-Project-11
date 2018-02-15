@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -20,5 +20,20 @@
 
 .App-intro {
   font-size: large;
+} */
+
+
+.image-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1024px;
 }
 
+.image {
+  margin: .5em;
+}
