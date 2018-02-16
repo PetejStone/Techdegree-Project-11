@@ -21,7 +21,7 @@ class App extends Component {
     this.performSearch();
   }
 
-  performSearch = (photo = 'dogs') => {
+  performSearch = (photo = 'sunset') => {
     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=488079c8066a12300cb5ba7edc88f9e6&tags=${photo}&per_page=20&format=json&nojsoncallback=1`)
     .then(response => {
       this.setState({
