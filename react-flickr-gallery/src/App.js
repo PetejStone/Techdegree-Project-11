@@ -7,25 +7,31 @@ import apiKey from './config.js';
 
 
 
+
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      images: []
+      images: [],
+      loading: true
     
     };
   } 
 
+  
+
   componentDidMount() {
     this.performSearch();
+    
   }
 
   performSearch = (photo = 'sunset') => {
-    axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=488079c8066a12300cb5ba7edc88f9e6&tags=${photo}&per_page=20&format=json&nojsoncallback=1`)
+    axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${photo}&per_page=20&format=json&nojsoncallback=1`)
     .then(response => {
       this.setState({
-        images: response.data.photos.photo
+        images: response.data.photos.photo,
+        loading: false
       });
     })
     .catch(error => {
@@ -35,14 +41,20 @@ class App extends Component {
     
   }
 
-
+ 
+ 
 
   render() {
+    
     console.log(this.state.images);
     return (
       <div className="App">
-        <SearchForm />
-        <ImageList data={this.state.images} />
+        <SearchForm onSearch={this.performSearch} />
+        <ImageList
+         data={this.state.images}
+         loading={this.state.loading}
+        
+        />
         
       </div>
     );

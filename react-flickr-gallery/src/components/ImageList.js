@@ -9,19 +9,25 @@ const ImageList = (props) => {
   const results = props.data;
 
   let photos;
-
+ 
   if (results.length > 0) {
+    
     photos = results.map(photo => 
-      <Image url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_q.jpg`} key={photo.id} />
-     )
-  } else {
+      <Image 
+      url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_q.jpg`} 
+      key={photo.id} 
+      loading={props.loading}
+      />
+     );
+     
+  } else  {
     photos = <NoImage />
   }
   
 
   return(
     <ul className="image-list">
-      {photos}
+      { props.loading ? <h1>Loading...</h1> : photos }
     </ul> 
   );
 }
