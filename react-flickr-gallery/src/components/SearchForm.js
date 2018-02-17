@@ -8,7 +8,7 @@ class SearchForm extends Component {
     }
 
     onSearch = e => {
-        this.State({
+        this.setState({
             searchText: e.target.value
         })
     }
@@ -27,7 +27,7 @@ class SearchForm extends Component {
         <form onSubmit={this.handleSubmit}>
             <input 
             className="searchphoto" 
-            onChange={this.onChange}
+            onChange={this.onSearch}
             name="search"
             type="search" 
             placeholder="Search for Photos" 
