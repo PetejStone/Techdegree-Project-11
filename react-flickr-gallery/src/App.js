@@ -75,19 +75,10 @@ class App extends Component {
     console.log(this.state.images);
     return (
       <div className="App">
-        <BrowserRouter>
-        <div>
+      
+       
           <Header performSearch={this.performSearch}/>
-          <Switch>
-
-            <Route path="/Birds" render={()=> <Birds data={this.handleRender} />}>Birds</Route>
-            <Route path="/cats" component={Cats}>Cats</Route>
-            <Route path="/dogs" component={Dogs}>Dogs</Route>
-            <Route></Route>
-          </Switch>
           
-          </div>
-        </BrowserRouter>
       
         <ImageList
          data={this.state.images}

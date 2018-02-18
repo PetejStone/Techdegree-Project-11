@@ -87,16 +87,18 @@
   width: 50%;
   margin: 0px auto;
   justify-content: space-between;
+  list-style-type: none;
 }
 
 .option {
   list-style-type: none;
-  text-decoration: none;
   color: #fff;
   width: 5em; 
   height: 3em;
   background-color: #296889;
   border-radius: 5px;
+  border: none;
+  outline: none;
   
 
 }
