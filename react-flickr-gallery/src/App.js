@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-import SearchForm from './components/SearchForm';
 import axios from 'axios';
 import ImageList from './components/ImageList';
-import './App.css';
+import './css/styles.css';
 import apiKey from './config.js';
-
-import {BrowserRouter, Route, Switch, NavLink} from 'react-router-dom';
 import Header from './components/Header';
-import ReactDOM from 'react-dom';
-import Cats from './components/Cats';
-import Dogs from './components/Dogs';
-import Birds from './components/Birds';
+
 
 
 

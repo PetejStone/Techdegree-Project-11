@@ -1,0 +1,118 @@
+//center content
+@mixin centered {
+  float: none;
+  margin: 0 auto;
+}
+
+@mixin flexy(
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  @content;
+}
+
+//flexbox mixins
+@mixin flexy-item ($pos){
+  align-self: $pos;
+  @content;
+}
+
+@mixin link-reset($color, $font: null) {
+  text-decoration: none;
+  list-style-type: none;
+  color: $color;
+  font-family: $font;
+}
+
+
+
+
+//Media queries
+
+@mixin mq($size) {
+  @if $size == 'small' {
+    @media (min-width: $brkpoint-sm) {
+      @content;
+    }
+  }
+  @else if $size --'medium' {
+    @media (min-width: $brkpoint-med) {
+      @include padding-horz(1em, 1em);
+      @content;
+    }
+  }
+  @else {
+    @error 'Must choose value of "small" or "large" .';
+  }
+
+}
+
+//BEM selectors
+
+@mixin e($element) {
+	&__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+
+
+//Padding Mixins
+
+@mixin padding-vert($padding-top: null, $padding-bottom: null) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
+
+@mixin padding-horz($padding-left: null, $padding-right: null) {
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}
+
+//Margin mixins
+
+@mixin margin-vert($margin-top: null, $margin-bottom: null) {
+  padding-top: $margin-top;
+  padding-bottom: $margin-bottom;
+}
+
+@mixin margin-horz($margin-left: null, $margin-right: null) {
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+
+//grid col mixin
+
+@mixin grid($column, $color) {
+  .theme__colors.grid__col--#{$column}{
+    background-color: $color;
+    height: 3em;
+    padding-top: 1em;
+    border-radius: .4em;
+    margin-bottom: .5em;
+    text-align: center;
+    @content;
+  }
+}
+
+@mixin btn($btn) {
+.theme__colors.btn--#{$btn}{
+  @include mq(small){
+    width: 100%;
+    @content;
+    @include mq(large){
+      width: 15%;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+}}}

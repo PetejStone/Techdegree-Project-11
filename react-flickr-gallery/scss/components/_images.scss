@@ -1,0 +1,17 @@
+.image-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    justify-content: space-evenly;
+ 
+
+  }
+  
+  
+  .image {
+    margin: 10px;
+  }

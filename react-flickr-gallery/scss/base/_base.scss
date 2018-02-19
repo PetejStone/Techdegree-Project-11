@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  font-family: $helvetica-font-stack;
+ 
+  
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+
+}
+
+body {
+  margin: 1em; ;
+  padding: 0;
+  font-family: $helvetica-font-stack;
+  
+}
+
+.image-list {
+  max-width: 1024px;
+}
+
+header {
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+
+
