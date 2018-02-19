@@ -460,6 +460,8 @@ template {
       padding-left: 1em;
       padding-right: 1em;
       width: 9em; } }
+  .option:focus {
+    background-color: #173b4e; }
 
 .searchform {
   width: 80%;

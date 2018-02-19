@@ -45,6 +45,9 @@
     @include mq(medium) {
         width: 9em;
     }
+    &:focus {
+       background-color: darken($main-color, 15%);
+    }
     
   
   }
