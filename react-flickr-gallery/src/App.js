@@ -4,6 +4,8 @@ import ImageList from './components/ImageList';
 import './css/styles.css';
 import apiKey from './config.js';
 import Header from './components/Header';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Error404 from './components/Error';
 
 
 
@@ -70,15 +72,25 @@ class App extends Component {
     return (
       <div className="App">
       
-       
-          <Header performSearch={this.performSearch}/>
-          
-      
-        <ImageList
-         data={this.state.images}
-         loading={this.state.loading}
+
+        <BrowserRouter>
+        <div>
+        <Header performSearch={this.performSearch}/>
+          <Switch>
+            <Route 
+            path="/" 
+            exact 
+            render={()=>(
+              <ImageList data={this.state.images} loading={this.state.loading} />
+            )}>
+            </Route>
+            <Route  component={Error404}></Route>
+          </Switch>
+        </div>
+        </BrowserRouter>
         
-        />
+
+    
         
       </div>
     );

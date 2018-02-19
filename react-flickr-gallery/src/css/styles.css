@@ -21,6 +21,9 @@ header {
   margin: 0 auto;
   margin-top: 1em; }
 
+.no-image {
+  max-width: 1024px; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -517,5 +520,17 @@ img:hover {
 .option:hover {
   animation: pulse .3s;
   box-shadow: 3px 5px 7px #894a29; }
+
+h2 {
+  text-align: center; }
+
+h3 {
+  font-weight: 100;
+  letter-spacing: 1px; }
+
+.no-image {
+  margin: 0 auto;
+  list-style-type: none;
+  text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */
