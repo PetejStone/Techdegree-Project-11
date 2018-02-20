@@ -12,7 +12,10 @@ class SearchForm extends Component {
             searchText: e.target.value
         })
     }
-
+    //handles the submit
+    //search.value retrieved from the 'ref' prop below
+    //onSearch = performSearch in App.js... the value the user types 
+    //in will then be the new state.
     handleSubmit = e => {
         e.preventDefault();
         this.props.onSearch(this.search.value);

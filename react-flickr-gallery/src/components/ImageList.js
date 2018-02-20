@@ -11,7 +11,7 @@ const ImageList = (props) => {
   let photos;
  
   if (results.length > 0) {
-    
+    //added loading state
     photos = results.map(photo => 
       <Image 
       url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_q.jpg`} 
@@ -26,6 +26,7 @@ const ImageList = (props) => {
   
 
   return(
+    //add loading to rendering
     <ul className="image-list">
       { props.loading ? <h1>Loading...</h1> : photos }
     </ul> 

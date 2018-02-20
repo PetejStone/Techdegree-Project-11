@@ -1,11 +1,12 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 const Error404 = () => (
     <li className='no-image'>
   
     <h2>Error 404</h2>
-    <h3>Sorry, URL extensions do not exist.
-        Try searching for photos in the searchbar above. </h3>
+    <h3>Sorry, that URL extension does not exist. </h3>
+    <h4><NavLink className="home-button" to="/">Go Home</NavLink></h4>
   </li>
 );
 

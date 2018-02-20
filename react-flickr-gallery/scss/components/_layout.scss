@@ -13,3 +13,16 @@ h3 {
     list-style-type: none;
     text-align: center;
   }
+
+  .home-button {
+    text-decoration: none;
+    color: $white;
+    background-color: $main-color;
+    display: block;
+    padding: 1em 1em;
+    border-radius: 5px;
+    width: 7em;
+    margin: 0 auto;
+    font-weight: $font-weight--thin;
+    letter-spacing: 1px;
+  }

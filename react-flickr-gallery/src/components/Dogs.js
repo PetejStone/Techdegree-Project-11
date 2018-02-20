@@ -1,8 +1,10 @@
 import React from 'react';
+import ImageList from './ImageList';
 
-const Dogs = () => (
+//Loading state added
+const Dogs = (props) => (
     <div>
-        Dogs
+        {props.loading ? <h1>Loading...</h1> : <ImageList data={props.data} loading={props.loading} />}
     </div>
 );
 
