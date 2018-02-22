@@ -8,9 +8,9 @@ const Header = (props) => (
     <div> 
       
         <ul className="nav-list">
-            <li className="option"><NavLink className="option" to="/birds"  onClick={()=> props.performSearch('Birds')} >Birds</NavLink></li>
-            <li className="option"><NavLink className="option" to="/cats" onClick={()=> props.performSearch('Cats')}>Cats</NavLink></li>
-            <li className="option"><NavLink className="option" to="/dogs" onClick={()=> props.performSearch('Dogs')}>Dogs</NavLink></li>
+            <li className="option"><NavLink className="option" to="/goats">Goats</NavLink></li>
+            <li className="option"><NavLink className="option" to="/cats">Cats</NavLink></li>
+            <li className="option"><NavLink className="option" to="/dogs" >Dogs</NavLink></li>
             <li className="option"><NavLink className="option" to="/search">Search</NavLink></li>
          </ul>
          

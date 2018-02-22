@@ -7,7 +7,7 @@ const Error404 = (props) => (
     
     <h2>Error 404</h2>
     <h3>Sorry, that URL extension does not exist. </h3>
-    <h4><NavLink className="home-button" to="/search">Search Photos</NavLink></h4>
+    <h4><NavLink className="option home-button" to="/search">Search Photos</NavLink></h4>
   </li>
  
 );

@@ -545,4 +545,15 @@ h3 {
   width: 75%;
   margin: 0 auto; }
 
+.option-title {
+  text-transform: capitalize; }
+
+.home-button {
+  width: 35%;
+  margin: 0 auto;
+  max-width: 250px; }
+
+.home-button {
+  font-weight: 100; }
+
 /*# sourceMappingURL=styles.css.map */

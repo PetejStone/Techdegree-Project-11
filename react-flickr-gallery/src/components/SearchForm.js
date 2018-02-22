@@ -18,7 +18,7 @@ class SearchForm extends Component {
     //in will then be the new state.
     handleSubmit = e => {
         e.preventDefault();
-        let path = `/search/${this.search.value}`;
+        let path = `/search/${this.option.value}`;
         this.props.history.push(path);
         e.currentTarget.reset();
         
@@ -36,7 +36,7 @@ class SearchForm extends Component {
             name="search"
             type="search" 
             placeholder="Search for Photos" 
-            ref={(input) => this.search = input}
+            ref={(input) => this.option = input}
             autoComplete="off"
             />
             <button className="searchbutton">search</button>
