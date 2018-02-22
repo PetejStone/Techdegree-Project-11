@@ -17,6 +17,7 @@ const ImageList = (props) => {
       url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_q.jpg`} 
       key={photo.id} 
       loading={props.loading}
+      
       />
      );
      
@@ -29,6 +30,7 @@ const ImageList = (props) => {
     //add loading to rendering
     <ul className="image-list">
       { props.loading ? <h1>Loading...</h1> : photos }
+  
     </ul> 
   );
 }

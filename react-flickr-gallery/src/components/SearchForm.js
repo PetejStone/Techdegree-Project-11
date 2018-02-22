@@ -21,6 +21,7 @@ class SearchForm extends Component {
         this.props.onSearch(this.search.value);
         e.currentTarget.reset();
         
+       
     }
 
     render() {

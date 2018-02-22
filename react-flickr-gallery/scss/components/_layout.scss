@@ -14,7 +14,7 @@ h3 {
     text-align: center;
   }
 
-  .home-button {
+.homes-button {
     text-decoration: none;
     color: $white;
     background-color: $main-color;
@@ -25,4 +25,8 @@ h3 {
     margin: 0 auto;
     font-weight: $font-weight--thin;
     letter-spacing: 1px;
+  }
+
+a.search {
+    color: green;
   }
