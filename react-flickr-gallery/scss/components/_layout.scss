@@ -14,19 +14,17 @@ h3 {
     text-align: center;
   }
 
-.homes-button {
-    text-decoration: none;
-    color: $white;
-    background-color: $main-color;
-    display: block;
-    padding: 1em 1em;
-    border-radius: 5px;
-    width: 7em;
-    margin: 0 auto;
-    font-weight: $font-weight--thin;
-    letter-spacing: 1px;
-  }
 
-a.search {
-    color: green;
+
+.search {
+    text-decoration: none;
+    color: #fff;
+    background-color: #296889;
+    display: block;
+    padding: 1.4em 1.4em;
+    border-radius: 5px;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+
   }

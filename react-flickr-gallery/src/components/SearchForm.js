@@ -18,7 +18,8 @@ class SearchForm extends Component {
     //in will then be the new state.
     handleSubmit = e => {
         e.preventDefault();
-        this.props.onSearch(this.search.value);
+        let path = `/search/${this.search.value}`;
+        this.props.history.push(path);
         e.currentTarget.reset();
         
        

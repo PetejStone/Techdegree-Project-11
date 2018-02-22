@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
 import './css/styles.css';
 import apiKey from './config.js';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import Error404 from './components/Error';
 import Cats from './components/Cats';
 import Dogs from './components/Dogs';
 import Birds from './components/Birds';
-
 import Search from './components/Search';
 import HomePage from './components/HomePage';
-
-
+import ImageList from './components/ImageList';
+import Header from './components/Header';
+import SearchForm from './components/SearchForm';
 class App extends Component {
 
   constructor() {
@@ -30,7 +29,12 @@ class App extends Component {
 //calls this function before it renders
   componentDidMount() {
     this.performSearch();
-    
+  
+  }
+
+  newPhoto() {
+    let photo = window.location.pathname.split("/")[2];
+    return photo;
   }
 
   performSearch = (photo = this.state.default) => {
@@ -59,21 +63,17 @@ class App extends Component {
       
         <BrowserRouter>
         <div>
+        <Header performSearch={this.performsSearch} />
           <Switch>
-            <Route 
-              path="/" 
-              exact 
-              render={()=>(
-                <HomePage />
-              )}>
-            </Route>
-            <Route path="/search"  render={()=> <Search performSearch={this.performSearch} data={this.state.images} loading={this.state.loading} />}></Route>
-            <Route path="/search/dogs"  render={()=> <Dogs  data={this.state.images} loading={this.state.loading} />} ></Route>
-            <Route path="/search/cats" render={()=> <Cats data={this.state.images} loading={this.state.loading}/>}></Route>
-            <Route path="/search/birds" render={()=> <Birds data={this.state.images} loading={this.state.loading} />}></Route>
+            <Route path= "/" exact render={() => <Redirect to="/search" />} />
+            <Route path="/search"  component={SearchForm}></Route>
+            <Route path="/dogs"  render={()=> <Dogs  data={this.state.images} loading={this.state.loading} />} ></Route>
+            <Route path="/cats" render={()=> <Cats data={this.state.images} loading={this.state.loading}/>}></Route>
+            <Route path="/birds" render={()=> <Birds data={this.state.images} loading={this.state.loading} />}></Route>
+            <Route path="/search/:id" component={ImageList}></Route>
             <Route  component={Error404}></Route>
           </Switch>
-             
+           
         </div>
         </BrowserRouter>
         
