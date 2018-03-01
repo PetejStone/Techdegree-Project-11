@@ -5,6 +5,8 @@
 (Make sure you have 'create-react-app' downloaded on your computer.)
 *https://reactjs.org/blog/2016/07/22/create-apps-with-no-configuration.html*
 
+**Download project files @ *https://github.com/PetejStone/Techdegree-project-11* **
+
 1) Apply for an API key at https://www.flickr.com/services/apps/create/apply/ if you don't already have one.
 
 2) Create a *FILE*, titled 'config.js' inside the 'src' *FOLDER* of this project.
